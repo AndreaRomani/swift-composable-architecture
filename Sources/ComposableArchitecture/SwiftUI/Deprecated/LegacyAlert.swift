@@ -67,8 +67,6 @@ extension View {
         Alert(alertState!) { action in
           if let action = action {
             store.send(.presented(fromDestinationAction(action)))
-          } else {
-            store.send(.dismiss)
           }
         }
       }
